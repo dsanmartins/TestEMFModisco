@@ -1,0 +1,24 @@
+modeltype kdm "strict" uses kdm('http://www.eclipse.org/MoDisco/kdm/kdm');
+modeltype code "strict" uses code('http://www.eclipse.org/MoDisco/kdm/code');
+modeltype action "strict" uses action('http://www.eclipse.org/MoDisco/kdm/action');
+modeltype source "strict" uses source('http://www.eclipse.org/MoDisco/kdm/source');
+modeltype structure "strict" uses structure('http://www.eclipse.org/MoDisco/kdm/structure');
+
+transformation ModelCode(in sourceModel:kdm, out targetModel:kdm);
+
+configuration property componentName: String;  
+
+main() {
+
+	 sourceModel.objectsOfType(StructureModel)-> getListOfComponent(componentName);
+}
+
+
+query StructureModel::getListOfComponent(componentName :String) : Component {
+	
+	log (self.name);
+	var component:Component := self.structureElement[Component] -> any(c|c.name = componentName);
+	log (component.name);
+	return component;
+	
+}

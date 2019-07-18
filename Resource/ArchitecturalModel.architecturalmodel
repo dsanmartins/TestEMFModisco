@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<architecturalModel:ArchitecturalRefactoringModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:architecturalModel="http://www.example.org/rMSAS/architecturalModel" xmlns:code="http://www.eclipse.org/MoDisco/kdm/code" xmlns:codeModel="http://www.example.org/rMSAS/codeModel" xmlns:constraintModel="http://www.example.org/rMSAS/constraintModel" xmlns:structure="http://www.eclipse.org/MoDisco/kdm/structure" name="AR1" smell="Scattered Reference Input" engine="ATL" description="Hola Mundo">
+  <architecturalOperation xsi:type="architecturalModel:Move" description="My first architectural Move operation">
+    <codeOperation xsi:type="codeModel:Move" description="My first code Move operation">
+      <condition xsi:type="constraintModel:PreCondition" href="Constraint2.constraintmodel#/0"/>
+      <entity xsi:type="code:StorableUnit" href="UNDERSEA_Controller_KDM.xmi#/0/@model.0/@codeElement.3/@codeElement.0/@codeElement.0/@codeElement.3"/>
+      <from xsi:type="code:ClassUnit" href="UNDERSEA_Controller_KDM.xmi#/0/@model.0/@codeElement.1/@codeElement.2"/>
+      <to xsi:type="code:ClassUnit" href="UNDERSEA_Controller_KDM.xmi#/0/@model.0/@codeElement.1/@codeElement.9"/>
+    </codeOperation>
+    <condition xsi:type="constraintModel:PreCondition" href="Constraint1.constraintmodel#/0"/>
+    <abstraction xsi:type="structure:Component" href="UNDERSEA_Controller_KDM.xmi#/0/@model.3/@structureElement.3"/>
+    <from xsi:type="structure:Component" href="UNDERSEA_Controller_KDM.xmi#/0/@model.3/@structureElement.2"/>
+    <to xsi:type="structure:Component" href="UNDERSEA_Controller_KDM.xmi#/0/@model.3/@structureElement.0"/>
+  </architecturalOperation>
+</architecturalModel:ArchitecturalRefactoringModel>
