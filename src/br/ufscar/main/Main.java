@@ -67,36 +67,20 @@ public class Main {
 		
 		//Create architectural precondition 
 		Constraint constraint = new Constraint();
-		PreCondition precondition = constraint.createPrecondition("Architectural OCL query");
-		constraint.persistConstraintModel(precondition, resource, "Constraint1");
+		PreCondition archPrecondition = constraint.createPrecondition("Architectural OCL query");
+		constraint.persistConstraintModel(archPrecondition, resource, "Constraint1");
 		
 		//Create code precondition
 		constraint = new Constraint();
-		precondition = constraint.createPrecondition("Code OCL query");
-		constraint.persistConstraintModel(precondition, resource, "Constraint2");
+		PreCondition codePrecondition = constraint.createPrecondition("Code OCL query");
+		constraint.persistConstraintModel(codePrecondition, resource, "Constraint2");
 		
-		//Load constraints resource
-		URI uriConstraint1 = URI.createFileURI("Constraint1.constraintmodel");
-		Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().put(Resource.Factory.Registry.DEFAULT_EXTENSION,new XMIResourceFactoryImpl());
-		ResourceSet resourceSetConstraint1 = new ResourceSetImpl();
-		Resource resourceConstraint1 = resourceSetConstraint1.createResource(uriConstraint1);
-		resourceConstraint1.load(null);
-		PreCondition archPreCondition = oclQuery.getPreCondition(resourceSetConstraint1, resourceConstraint1);
-		
-		URI uriConstraint2 = URI.createFileURI("Constraint2.constraintmodel");
-		Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().put(Resource.Factory.Registry.DEFAULT_EXTENSION,new XMIResourceFactoryImpl());
-		ResourceSet resourceSetConstraint2 = new ResourceSetImpl();
-		Resource resourceConstraint2 = resourceSetConstraint2.createResource(uriConstraint2);
-		resourceConstraint2.load(null);
-		PreCondition codePreCondition = oclQuery.getPreCondition(resourceSetConstraint2, resourceConstraint2);
-		
-		
-		
+	
 		// Create architectural model
 		Architecture architecture = new Architecture();
 		ArchitecturalRefactoringModel archModel = architecture.createArchitectureModel(abstraction, component1, component2, 
 				entity , codeElement1, codeElement2,
-				archPreCondition,codePreCondition);
+				archPrecondition,codePrecondition);
 		
 		architecture.persistArchitecturalRefactoringModel(archModel, resource, "ArchitecturalModel");
 		
