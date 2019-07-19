@@ -1,4 +1,4 @@
-package br.ufacar.architecture;
+package br.ufscar.architecture;
 
 import java.io.File;
 import java.io.IOException;

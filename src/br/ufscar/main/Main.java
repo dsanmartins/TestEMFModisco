@@ -13,7 +13,7 @@ import org.eclipse.gmt.modisco.omg.kdm.kdm.KdmPackage;
 import org.eclipse.gmt.modisco.omg.kdm.structure.Component;
 import org.eclipse.ocl.ParserException;
 
-import br.ufacar.architecture.Architecture;
+import br.ufscar.architecture.Architecture;
 import br.ufscar.constraint.Constraint;
 import br.ufscar.query.OCLQuery;
 import rMSAS.architecturalModel.ArchitecturalRefactoringModel;
