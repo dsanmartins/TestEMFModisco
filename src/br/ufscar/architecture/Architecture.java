@@ -10,8 +10,8 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
-import org.eclipse.gmt.modisco.omg.kdm.code.AbstractCodeElement;
-import org.eclipse.gmt.modisco.omg.kdm.structure.AbstractStructureElement;
+import org.eclipse.modisco.omg.kdm.code.AbstractCodeElement;
+import org.eclipse.modisco.omg.kdm.structure.AbstractStructureElement;
 
 import rMSAS.architecturalModel.ArchitecturalModelFactory;
 import rMSAS.architecturalModel.ArchitecturalRefactoringModel;

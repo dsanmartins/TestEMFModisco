@@ -7,10 +7,10 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
-import org.eclipse.gmt.modisco.omg.kdm.code.ClassUnit;
-import org.eclipse.gmt.modisco.omg.kdm.code.StorableUnit;
-import org.eclipse.gmt.modisco.omg.kdm.kdm.KdmPackage;
-import org.eclipse.gmt.modisco.omg.kdm.structure.Component;
+import org.eclipse.modisco.omg.kdm.code.ClassUnit;
+import org.eclipse.modisco.omg.kdm.code.StorableUnit;
+import org.eclipse.modisco.omg.kdm.kdm.KdmPackage;
+import org.eclipse.modisco.omg.kdm.structure.Component;
 import org.eclipse.ocl.ParserException;
 
 import br.ufscar.architecture.Architecture;
